@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="extension">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:anySimpleType"/>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="restriction">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:restriction base="xs:string"/>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="simpleContent">
+		<xs:simpleContent>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="simpleContent1">
+		<xs:simpleContent>
+			<xs:restriction base="simpleContent"/>
+		</xs:simpleContent>
+		
+	</xs:complexType>
+
+
+</xs:schema>

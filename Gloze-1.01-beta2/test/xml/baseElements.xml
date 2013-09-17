@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<links xmlns="http://example.org/link" 
+	xml:base="http://example.org/baseElements.xml" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/link ../schema/link.xsd" >
+	<link xml:base="a/" xlink:href="b.xml" />
+</links>
+

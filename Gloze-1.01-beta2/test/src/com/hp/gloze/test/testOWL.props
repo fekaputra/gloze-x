@@ -1,0 +1,5 @@
+base=http://example.org/
+xmlns=http://example.org/unqualified
+xsd=test/schema
+rdf=test/rdf
+owl=test/owl

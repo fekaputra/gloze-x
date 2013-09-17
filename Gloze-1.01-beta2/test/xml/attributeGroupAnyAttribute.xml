@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<anyAttribute xmlns="http://example.org/" xmlns:eg="http://example.org/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/ ../schema/attributeGroup.xsd"
+	eg:foobar="foobar">
+</anyAttribute>
+
+

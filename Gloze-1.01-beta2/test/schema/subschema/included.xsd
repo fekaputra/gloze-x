@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">	
+	<xs:include schemaLocation="../altschema/void.xsd" />
+	<xs:include schemaLocation="subschema/void.xsd" />
+	<xs:group name="Group">
+		<xs:sequence>
+			<xs:element name="foo">
+				<xs:complexType>
+					<xs:attribute name="name" type="xs:token" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+		
+</xs:schema>

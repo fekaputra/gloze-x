@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="element" />
+	
+	<xs:element name="globalComplexType" type="GlobalComplexType"/>	
+	<xs:complexType name="GlobalComplexType" mixed="true" />
+	
+	<xs:element name="globalSimpleType" type="GlobalSimpleType"/>	
+	<xs:simpleType name="GlobalSimpleType">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+	
+	<xs:element name="dataType" type="xs:anySimpleType" />
+	<xs:element name="qname" type="xs:QName" />	
+	<xs:element name="duration" type="xs:duration" />
+	<xs:element name="nmtokens" type="xs:NMTOKENS" />	
+	<xs:element name="entity" type="xs:ENTITY" />	
+	
+	<xs:element name="complexType">
+		<xs:complexType mixed="true" />
+	</xs:element>
+
+	<xs:element name="simpleType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string" />
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="nillable" type="xs:anySimpleType" nillable="true"/>
+
+	<xs:element name="identity4">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foo">
+					<xs:simpleType>
+						<xs:restriction base="xs:ID"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="bar">
+					<xs:simpleType>
+						<xs:restriction base="xs:IDREF"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="identity1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foo" type="xs:ID" />
+				<xs:element name="bar" type="xs:IDREF" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="identity2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foo">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:ID">
+								<xs:attribute name="foobar" type="xs:string" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bar">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:IDREF">
+								<xs:attribute name="foobar" type="xs:string" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="identity3">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foo" type="xs:ID" />
+				<xs:element name="bar" type="xs:IDREFS" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="identity">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foo">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:anySimpleType">
+								<xs:attribute name="id" type="xs:ID" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bar" type="xs:IDREF" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="head" />
+	<xs:element name="member" type="xs:string" substitutionGroup="head"/>
+	<xs:element name="substitution">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="head" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

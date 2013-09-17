@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.org/" 
+ xmlns:tns="http://example.org/" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="subschema/example.xsd" />
+	<xs:include schemaLocation="subschema/included.xsd" />
+
+	<!-- the restriction has card(foo) of 1 and is (by definition) a subClassOf ComplexTypeSequence -->
+	<xs:complexType name="restriction">
+		<xs:complexContent>
+			<xs:restriction base="tns:ComplexTypeSequence">
+				<xs:sequence maxOccurs="1">
+					<xs:element name="foo" type="xs:string" />
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- the extension has maxCard(foo) of 2 so is not a subClassOf ComplexTypeSequence -->
+	<xs:complexType name="extension">
+		<xs:complexContent>
+			<xs:extension base="tns:ComplexTypeSequence">
+				<xs:sequence>
+					<xs:element name="foo" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="group">
+		<xs:sequence>
+			<xs:group ref="Group" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

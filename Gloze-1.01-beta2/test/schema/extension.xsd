@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="foo" type="xs:string" />
+	
+	<xs:element name="attribute">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:anySimpleType">
+					<xs:attribute name="foo" type="xs:anySimpleType"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="anyAttribute">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:anySimpleType">
+					<xs:anyAttribute namespace="##local" processContents="skip"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attributeGroup name="AttributeGroup">
+		<xs:attribute name="foo" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:element name="attributeGroup">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:anySimpleType">
+					<xs:attributeGroup ref="AttributeGroup" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="ComplexTypeSequence">
+		<xs:sequence>
+			<xs:element ref="foo"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- the cardinality of foo lies in the interval [1,2] so this is not a subClassOf ComplexTypeSequence -->
+	<xs:complexType name="Sequence">
+		<xs:complexContent>
+			<xs:extension base="ComplexTypeSequence">
+				<xs:sequence>
+					<xs:element ref="foo"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="sequence" type="Sequence" />
+	
+	<xs:element name="sequenceRange">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="ComplexTypeSequence">
+					<xs:sequence>
+						<xs:element ref="foo"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

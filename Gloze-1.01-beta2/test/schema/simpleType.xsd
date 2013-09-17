@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="simpleType" type="SimpleType"/>
+	<xs:simpleType name="SimpleType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	
+	<xs:element name="restriction">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:enumeration value="0"/>
+				<xs:enumeration value="1"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="list1" type="List1"/>
+	<xs:simpleType name="List1">
+  		<xs:list itemType="xs:anyURI"/>
+	</xs:simpleType>
+
+	<xs:element name="list2" type="List2"/>
+	<xs:simpleType name="List2">
+  		<xs:list itemType="xs:QName"/>
+	</xs:simpleType>
+
+	<xs:element name="list3" type="List3"/>
+	<xs:simpleType name="List3">
+  		<xs:list>
+	      <xs:simpleType>
+  		    <xs:union memberTypes="xs:QName xs:anyURI"/>
+	      </xs:simpleType>
+  		</xs:list>
+	</xs:simpleType>
+
+	<xs:element name="list4" type="List4"/>
+	<xs:simpleType name="List4">
+  		<xs:list>
+	      <xs:simpleType>
+  		    <xs:union memberTypes="xs:QName">
+	          <xs:simpleType>
+  		        <xs:union memberTypes="xs:anyURI"/>
+	          </xs:simpleType>
+  		    </xs:union>
+	      </xs:simpleType>
+  		</xs:list>
+	</xs:simpleType>
+
+	<xs:element name="union" type="Union"/>
+	<xs:simpleType name="Union">
+  		<xs:union memberTypes="List1">
+	      <xs:simpleType>
+  		    <xs:list itemType="xs:QName"/>
+	      </xs:simpleType>
+  		</xs:union>
+	</xs:simpleType>
+	
+	<xs:simpleType name="Enumeration">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="foo" />
+			<xs:enumeration value="bar" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="enumeration" type="Enumeration" />
+	
+</xs:schema>

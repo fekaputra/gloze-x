@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="simpleType">
+		<xs:simpleType>
+			<xs:restriction>
+				<xs:simpleType>
+					<xs:restriction base="xs:string" />
+				</xs:simpleType>
+				<xs:length value="6" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="minExclusive">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minExclusive value="0" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="minInclusive">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minInclusive value="0" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="maxExclusive">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:maxExclusive value="1" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="maxInclusive">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:maxInclusive value="1" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="totalDigits">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:totalDigits value="1" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="fractionDigits">
+		<xs:simpleType>
+			<xs:restriction base="xs:float">
+				<xs:fractionDigits value="2" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="length">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:length value="2" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="minLength">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:minLength value="1" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="maxLength">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:maxLength value="2" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="enumeration">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:enumeration value="0" />
+				<xs:enumeration value="1" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="whiteSpace">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:whiteSpace value="preserve" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="pattern">
+		<xs:simpleType>
+			<xs:restriction base="xs:integer">
+				<xs:pattern value="[01]*" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:complexType name="SimpleContent">
+		<xs:simpleContent>
+			<xs:extension base="xs:anySimpleType">
+				<xs:attribute name="foobar" type="xs:anySimpleType" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="attribute">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:restriction base="SimpleContent">
+					<xs:attribute name="foobar" type="xs:string" />
+				</xs:restriction>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attributeGroup name="AttributeGroup">
+		<xs:attribute name="foobar" type="xs:string" />
+	</xs:attributeGroup>
+	<xs:element name="attributeGroup">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:restriction base="SimpleContent">
+					<xs:attributeGroup ref="AttributeGroup" />
+				</xs:restriction>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="SimpleContentAnyAttribute">
+		<xs:simpleContent>
+			<xs:extension base="xs:anySimpleType">
+				<xs:anyAttribute namespace="##other" processContents="skip"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="anyAttribute">
+		<xs:complexType>
+			<xs:simpleContent>
+				<!-- restore the non-inherited anyAttribute -->
+				<xs:restriction base="SimpleContentAnyAttribute">
+					<xs:anyAttribute namespace="##other" processContents="skip"/>
+				</xs:restriction>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="ComplexTypeAll" mixed="true">
+		<xs:all>
+			<xs:element name="foo" type="xs:anySimpleType" />
+		</xs:all>
+	</xs:complexType>
+	<xs:group name="Group">
+		<xs:all>
+			<xs:element name="foo" type="xs:string" />
+		</xs:all>
+	</xs:group>
+	<xs:element name="group">
+		<xs:complexType>
+			<xs:complexContent mixed="true">
+				<xs:restriction base="ComplexTypeAll">
+					<xs:group ref="Group" maxOccurs="unbounded"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="all">
+		<xs:complexType>
+			<xs:complexContent mixed="true">
+				<xs:restriction base="ComplexTypeAll">
+					<xs:all>
+						<xs:element name="foo" type="xs:string" />
+					</xs:all>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="ComplexTypeChoice" mixed="true">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="foo" type="xs:anySimpleType" />
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="choice">
+		<xs:complexType>
+			<xs:complexContent mixed="true">
+				<xs:restriction base="ComplexTypeChoice">
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="foo" type="xs:string" />
+					</xs:choice>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="ComplexTypeSequence" mixed="true">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="foo" type="xs:anySimpleType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="sequence">
+		<xs:complexType>
+			<xs:complexContent mixed="true">
+				<xs:restriction base="ComplexTypeSequence">
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="foo" type="xs:string" />
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- nested restrictions -->
+	<xs:element name="nested">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:restriction base="SimpleContent">
+					<xs:attribute name="foobar">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="6"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:restriction>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

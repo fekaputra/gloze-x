@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://example.org/link" xmlns="http://example.org/link"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	elementFormDefault="qualified">
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="subschema/xlink.xsd" />
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="subschema/xml.xsd" />
+	<xs:element name="link">
+		<xs:complexType>
+			<xs:attributeGroup ref="xlink:simpleLink"/>
+			<xs:attributeGroup ref="xml:specialAttrs"/>
+			<xs:attribute ref="xml:id"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="links">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="link"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="xml:specialAttrs"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

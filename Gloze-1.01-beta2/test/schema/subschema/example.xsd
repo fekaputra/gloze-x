@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.org/"
+	elementFormDefault="qualified">
+	<xs:element name="foo" type="xs:string" />
+	<xs:element name="bar" type="xs:int" />
+	
+	<xs:simpleType name="SimpleType">
+		<xs:restriction base="xs:anySimpleType" />
+	</xs:simpleType>
+
+	<xs:complexType name="ComplexType" mixed="true">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:group name="Group">
+		<xs:all>
+			<xs:element name="foo" type="xs:string" />
+		</xs:all>
+	</xs:group>
+
+	<xs:complexType name="ComplexTypeSequence">
+		<xs:sequence>
+			<xs:element name="foo" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+		
+</xs:schema>

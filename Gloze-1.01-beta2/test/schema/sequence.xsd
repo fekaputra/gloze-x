@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="foobar" type="xs:string" />
+	<xs:element name="foo" type="xs:string" />
+	<xs:element name="bar" type="xs:int" />
+	
+	<xs:element name="any">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:any maxOccurs="unbounded" namespace="##any" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="other">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:any namespace="##other" processContents="lax"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="tns">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:any namespace="##targetNamespace"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="uri">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:any namespace="http://example.org/"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="local">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:any namespace="##local"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="element">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="foo" minOccurs="0"/>
+				<xs:element ref="bar"/>
+				<xs:element ref="foo" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+
+	<xs:element name="empty">
+		<xs:complexType mixed="true">
+			<xs:sequence minOccurs="0">
+				<xs:element ref="foo" />
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+
+	<xs:element name="elementMax">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="foo" maxOccurs="unbounded"/>
+				<xs:element ref="bar" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+
+	<xs:element name="choice">
+		<xs:complexType mixed="true">	
+			<xs:sequence maxOccurs="unbounded">
+				<xs:choice>
+					<xs:element ref="foo" />
+					<xs:element ref="bar" />
+				</xs:choice>
+			</xs:sequence>
+ 		</xs:complexType>
+ 	</xs:element>
+
+	<xs:element name="unambiguous">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="foo" minOccurs="0"/>
+				<xs:element ref="bar"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:group name="Group">
+		<xs:sequence>
+			<xs:element ref="foo" minOccurs="0"/>
+			<xs:element ref="bar" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:element name="group">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:group ref="Group" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+
+	<xs:element name="sequence">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element ref="foo" maxOccurs="unbounded"/>
+					<xs:element ref="bar" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>	
+	</xs:element>
+
+</xs:schema>

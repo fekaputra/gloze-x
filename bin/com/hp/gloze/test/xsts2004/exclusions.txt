@@ -1,0 +1,13 @@
+NISTXML-SV-II-atomic-gDay-maxInclusive-2-2.xml
+NISTXML-SV-II-atomic-gDay-maxInclusive-2-3.xml
+NISTXML-SV-II-atomic-gDay-maxInclusive-2-4.xml
+NISTXML-SV-IV-atomic-gDay-maxInclusive-3-2.xml
+NISTXML-SV-IV-atomic-gDay-maxInclusive-3-3.xml
+NISTXML-SV-IV-atomic-gDay-maxInclusive-3-4.xml
+NISTXML-SV-IV-atomic-gDay-maxInclusive-3-5.xml
+NISTXML-SV-II-atomic-gMonth-minExclusive-3-2.xml
+NISTXML-SV-II-atomic-gMonth-minExclusive-3-3.xml
+NISTXML-SV-II-atomic-gMonth-minExclusive-3-5.xml
+NISTXML-SV-IV-atomic-gMonth-maxExclusive-2-2.xml
+NISTXML-SV-IV-atomic-gMonth-maxExclusive-2-4.xml
+NISTXML-SV-IV-atomic-gMonth-maxExclusive-2-5.xml

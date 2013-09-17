@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="foo" type="xs:string"/>
+	<xs:element name="bar" type="xs:int"/>
+	<xs:attribute name="foobar" type="xs:string"/>
+	
+	<xs:element name="complexType" type="ComplexType"/>
+	<xs:complexType name="ComplexType" mixed="true" />
+
+	<xs:element name="complexContent" type="ComplexContent"/>
+	<xs:complexType name="ComplexContent" mixed="true">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType"/>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="simpleContent" type="SimpleContent"/>
+	<xs:complexType name="SimpleContent">
+		<xs:simpleContent>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:element name="all" type="All"/>
+	<xs:complexType name="All" mixed="true">
+		<xs:all>
+			<xs:element ref="foo"/>
+			<xs:element ref="bar"/>
+		</xs:all>
+	</xs:complexType>
+	
+	<xs:element name="attribute" type="Attribute"/>
+	<xs:complexType name="Attribute">
+		<!-- the first attribute is global and qualified -->
+		<xs:attribute ref="foobar"/>
+		<!-- the latter attribute is unqualified -->
+		<xs:attribute name="foobar" type="xs:string" />
+	</xs:complexType>
+	
+	<xs:element name="sequence" type="Sequence"/>
+	<xs:complexType name="Sequence" mixed="true">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element ref="foo" maxOccurs="unbounded"/>
+			<xs:element ref="bar" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="choice" type="Choice"/>
+	<xs:complexType name="Choice" mixed="true">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element ref="foo" maxOccurs="unbounded"/>
+			<xs:element ref="bar" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:element name="anyAttribute" type="AnyAttribute" />
+	<xs:complexType name="AnyAttribute">
+		<xs:anyAttribute namespace="##any" processContents="skip"/>
+	</xs:complexType>
+	
+ 	<xs:group name="Group">
+ 		<xs:sequence>
+ 			<xs:element ref="foo" />
+			<xs:element ref="bar" />		
+ 		</xs:sequence>
+ 	</xs:group>
+ 	<xs:element name="group" type="Group" />
+	<xs:complexType name="Group" mixed="true">
+		<xs:group ref="Group" maxOccurs="unbounded"/>
+	</xs:complexType>
+
+ 	<xs:attributeGroup name="AttributeGroup">
+  		<xs:attribute name="foobar" type="xs:string"/>
+ 	</xs:attributeGroup>
+ 	<xs:element name="attributeGroup" type="AttributeGroup" />
+	<xs:complexType name="AttributeGroup" mixed="true">
+		<xs:attributeGroup ref="AttributeGroup"/>
+	</xs:complexType>
+	
+	<!-- minimum cardinality of 0 for each choice -->
+	<xs:complexType name="SequenceChoice" mixed="true">
+		<xs:sequence>
+			<xs:element ref="foo" />
+			<xs:element ref="bar" />
+			<xs:choice>
+				<xs:element ref="foo" />
+				<xs:element ref="bar" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- element foo has max cardinality 4 -->
+	<xs:complexType name="Any">
+		<xs:sequence>
+			<xs:any namespace="http://example.org http://example.org"/>
+			<xs:any namespace="##any"/>
+			<xs:any namespace="##targetNamespace"/>
+			<xs:any namespace="##other"/>
+			<xs:any namespace="##local"/>
+			<xs:element ref="foo" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Recursive">
+		<xs:sequence>
+			<xs:element name="recursive" type="Recursive" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Union">
+		<xs:sequence>
+			<xs:element name="union" type="Foo" />
+			<xs:element name="union" type="Bar" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="maxSum">
+		<xs:sequence>
+			<xs:element name="foo" type="Foo" />
+			<xs:element name="foo" type="Foo" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Foo" />
+	<xs:complexType name="Bar" />
+
+</xs:schema>

@@ -1,0 +1,18 @@
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.w3schools.com"
+	targetNamespace="http://cdl.ifs.tuwien.ac.at">
+	
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="author" type="xs:string"/>
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="genre" type="xs:string"/>
+				<xs:element name="price" type="xs:string"/>
+				<xs:element name="publish_date" type="xs:string"/>
+				<xs:element name="description" type="xs:string"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

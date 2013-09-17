@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="foo" type="xs:string" />
+	<xs:element name="bar" type="xs:int" />
+
+	<xs:element name="element">
+		<xs:complexType mixed="true">
+			<xs:choice>
+				<xs:element ref="bar" />
+				<xs:element ref="foo" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="elementMax">
+		<xs:complexType mixed="true">
+			<xs:choice>
+				<xs:element ref="foo" maxOccurs="unbounded"/>
+				<xs:element ref="bar" />
+			</xs:choice>
+ 		</xs:complexType>
+ 	</xs:element>
+
+	<xs:element name="sequence">
+		<xs:complexType mixed="true">
+			<xs:choice>
+				<xs:sequence>
+					<xs:element ref="foo" />
+					<xs:element ref="bar" />
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element ref="foo" />
+					<xs:element ref="bar" />
+				</xs:sequence>
+			</xs:choice>
+ 		</xs:complexType>
+ 	</xs:element>
+ 	
+ 	<xs:group name="Group">
+ 		<xs:sequence>
+ 			<xs:element ref="foo" />
+			<xs:element ref="bar" />		
+ 		</xs:sequence>
+ 	</xs:group>
+ 	
+ 	<xs:element name="group">
+ 		<xs:complexType mixed="true">
+ 			<xs:choice>
+ 				<xs:group ref="Group"/>
+ 			</xs:choice>
+ 		</xs:complexType>
+ 	</xs:element>
+
+ 	<xs:element name="choice">
+ 		<xs:complexType mixed="true">
+ 			<xs:choice>
+ 				<xs:choice>
+					<xs:element ref="foo" />
+					<xs:element ref="bar" />
+				</xs:choice>
+ 			</xs:choice>
+ 		</xs:complexType>
+ 	</xs:element>
+
+ 	<xs:element name="any">
+ 		<xs:complexType mixed="true">
+ 			<xs:choice>
+				<xs:any namespace="##other"/>
+				<xs:any namespace="##targetNamespace"/>
+				<xs:any namespace="##local"/>
+ 			</xs:choice>
+ 		</xs:complexType>
+ 	</xs:element>
+
+</xs:schema>

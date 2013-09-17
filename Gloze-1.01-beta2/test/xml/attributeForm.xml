@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/ ../schema/attribute.xsd"
+	xmlns="http://example.org/" xmlns:n1="http://example.org/"
+	bar="foobar" n1:bar="fubar">
+	bar is local and unqualified whilst n1:bar is explicitly qualified
+</form>
+
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<all xmlns="http://example.org/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/ ../schema/group.xsd">
+	<foo>bar</foo>
+	<bar>1</bar>
+</all>

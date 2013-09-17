@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link xmlns="http://example.org/link"
+	xlink:href="http://example.org/a.xml" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/link ../schema/link.xsd" />
+

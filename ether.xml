@@ -1,0 +1,1470 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CompleteXMLDescription>
+  <TREEITEMTYPE_DEVICE>
+    <ItemName>Device 1 (EtherCAT)</ItemName>
+    <PathName>TIID^Device 1 (EtherCAT)</PathName>
+    <ItemType>2</ItemType>
+    <ItemId>1</ItemId>
+    <ItemSubType>94</ItemSubType>
+    <ItemSubTypeName>EtherCAT Adapter (Direct Mode)</ItemSubTypeName>
+    <ChildCount>7</ChildCount>
+    <Disabled>0</Disabled>
+    <CreateSymbols>0</CreateSymbols>
+    <TreeImageData16x14>424dba030000000000003a00000028000000100000000e0000000100200000000000800300000000000000000000000000000000000000000000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00000000000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c0000000000000000000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00000000000000000000000000000000000000000000000000000000000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c0000000000000000000000000000000000000000000000000000000000000000000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c0000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c000c0c0c0000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff000000ff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c0000000ff000000ff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c0000000ff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</TreeImageData16x14>
+    <DeviceDef>
+      <AmsPort>28673</AmsPort>
+      <AmsNetId>1.1.1.1.2.1</AmsNetId>
+      <AddressInfo>
+        <Pnp>
+          <DeviceDesc/>
+          <DeviceName/>
+          <DeviceData>000000000000</DeviceData>
+        </Pnp>
+      </AddressInfo>
+      <ScanBoxes>0</ScanBoxes>
+    </DeviceDef>
+    <TREEITEMTYPE_IMAGE>
+      <ItemName>Device 1-Image</ItemName>
+      <PathName>TIID^Device 1 (EtherCAT)^Device 1-Image</PathName>
+      <ItemType>3</ItemType>
+      <ItemId>1</ItemId>
+      <ItemSubType>3</ItemSubType>
+      <ItemSubTypeName>Master-Sync Image</ItemSubTypeName>
+      <Disabled>0</Disabled>
+      <TreeImageId>8</TreeImageId>
+    </TREEITEMTYPE_IMAGE>
+    <TREEITEMTYPE_VARGRP>
+      <ItemName>Inputs</ItemName>
+      <PathName>TIID^Device 1 (EtherCAT)^Inputs</PathName>
+      <ItemType>8</ItemType>
+      <ItemId>0</ItemId>
+      <ItemSubType>1</ItemSubType>
+      <ChildCount>4</ChildCount>
+      <Disabled>0</Disabled>
+      <TreeImageId>13</TreeImageId>
+      <TREEITEMTYPE_VAR>
+        <ItemName>Frm0State</ItemName>
+        <Comment><![CDATA[0x0001 = 1. EtherCAT command not sent (NOP requested)
+0x0002 = 2. EtherCAT command not sent (NOP requested)
+0x0004 = 3. EtherCAT command not sent (NOP requested)
+...
+0x4000 = 15. EtherCAT command not sent (NOP requested)
+0x8000 = complete frame not sent
+]]></Comment>
+        <PathName>TIID^Device 1 (EtherCAT)^Inputs^Frm0State</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>6</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>12</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12160</VarBitAddr>
+          <VarInOut>0</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>73729</IndexGroup>
+            <IndexOffset>1520</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+      <TREEITEMTYPE_VAR>
+        <ItemName>Frm0WcState</ItemName>
+        <Comment><![CDATA[0x0001 = wrong working counter of 1. EtherCAT command received
+0x0002 = wrong working counter of 2. EtherCAT command received
+0x0004 = wrong working counter of 3. EtherCAT command received
+...
+0x4000 = wrong working counter of 15. EtherCAT command received
+0x8000 = complete frame missing
+]]></Comment>
+        <PathName>TIID^Device 1 (EtherCAT)^Inputs^Frm0WcState</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>7</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>12</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12176</VarBitAddr>
+          <VarInOut>0</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>73729</IndexGroup>
+            <IndexOffset>1522</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+      <TREEITEMTYPE_VAR>
+        <ItemName>SlaveCount</ItemName>
+        <Comment><![CDATA[Actual count of EtherCAT slaves received]]></Comment>
+        <PathName>TIID^Device 1 (EtherCAT)^Inputs^SlaveCount</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>1</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>12</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12240</VarBitAddr>
+          <VarInOut>0</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>73729</IndexGroup>
+            <IndexOffset>1530</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+      <TREEITEMTYPE_VAR>
+        <ItemName>DevState</ItemName>
+        <Comment><![CDATA[0x0001 = Link error
+0x0002 = I/O locked after link error (I/O reset required)
+0x0004 = Link error (redundancy adapter)
+0x0008 = Missing one frame (redundancy mode)
+0x0010 = Out of send resources (I/O reset required)
+0x0020 = Watchdog triggered
+0x0040 = Ethernet driver (miniport) not found
+0x0080 = I/O reset active
+0x0100 = At least one device in 'INIT' state
+0x0200 = At least one device in 'PRE-OP' state
+0x0400 = At least one device in 'SAFE-OP' state
+0x0800 = At least one device indicates an error state
+0x1000 = DC not in sync
+]]></Comment>
+        <PathName>TIID^Device 1 (EtherCAT)^Inputs^DevState</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>2</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>12</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12272</VarBitAddr>
+          <VarInOut>0</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>73729</IndexGroup>
+            <IndexOffset>1534</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+    </TREEITEMTYPE_VARGRP>
+    <TREEITEMTYPE_VARGRP>
+      <ItemName>Outputs</ItemName>
+      <PathName>TIID^Device 1 (EtherCAT)^Outputs</PathName>
+      <ItemType>8</ItemType>
+      <ItemId>0</ItemId>
+      <ItemSubType>2</ItemSubType>
+      <ChildCount>3</ChildCount>
+      <Disabled>0</Disabled>
+      <TreeImageId>15</TreeImageId>
+      <TREEITEMTYPE_VAR>
+        <ItemName>Frm0Ctrl</ItemName>
+        <Comment><![CDATA[0x0001 = prevent 1. EtherCAT command from sending (request NOP)
+0x0002 = prevent 2. EtherCAT command from sending (request NOP)
+0x0004 = prevent 3. EtherCAT command from sending (request NOP)
+...
+0x4000 = prevent 15. EtherCAT command from sending (request NOP)
+0x8000 = prevent complete frame from sending
+]]></Comment>
+        <PathName>TIID^Device 1 (EtherCAT)^Outputs^Frm0Ctrl</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>8</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>14</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12160</VarBitAddr>
+          <VarInOut>1</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>69633</IndexGroup>
+            <IndexOffset>1520</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+      <TREEITEMTYPE_VAR>
+        <ItemName>Frm0WcCtrl</ItemName>
+        <Comment><![CDATA[0x0001 = copy data with wrong working counter of 1. EtherCAT command
+0x0002 = copy data with wrong working counter of 2. EtherCAT command
+0x0004 = copy data with wrong working counter of 3. EtherCAT command
+...
+0x4000 = copy data with wrong working counter of 15. EtherCAT command
+]]></Comment>
+        <PathName>TIID^Device 1 (EtherCAT)^Outputs^Frm0WcCtrl</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>9</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>14</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12176</VarBitAddr>
+          <VarInOut>1</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>69633</IndexGroup>
+            <IndexOffset>1522</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+      <TREEITEMTYPE_VAR>
+        <ItemName>DevCtrl</ItemName>
+        <PathName>TIID^Device 1 (EtherCAT)^Outputs^DevCtrl</PathName>
+        <ItemType>7</ItemType>
+        <ItemId>3</ItemId>
+        <ItemSubType>5</ItemSubType>
+        <ChildCount>0</ChildCount>
+        <Disabled>0</Disabled>
+        <TreeImageId>14</TreeImageId>
+        <VarDef>
+          <VarType>UINT16</VarType>
+          <VarTypeIEC>UINT</VarTypeIEC>
+          <VarBitSize>16</VarBitSize>
+          <VarBitAddr>12272</VarBitAddr>
+          <VarInOut>1</VarInOut>
+          <OnlineValue>0</OnlineValue>
+          <AdsInfo>
+            <AmsAddress>
+              <AmsPort>300</AmsPort>
+            </AmsAddress>
+            <IndexGroup>69633</IndexGroup>
+            <IndexOffset>1534</IndexOffset>
+            <Length>2</Length>
+          </AdsInfo>
+        </VarDef>
+      </TREEITEMTYPE_VAR>
+    </TREEITEMTYPE_VARGRP>
+    <TREEITEMTYPE_BOX>
+      <ItemName>Term 1 (EK1100)</ItemName>
+      <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)</PathName>
+      <ItemType>5</ItemType>
+      <ItemId>1</ItemId>
+      <ItemSubType>9099</ItemSubType>
+      <ItemSubTypeName>EK1100 EtherCAT-Koppler (2A E-Bus)</ItemSubTypeName>
+      <Disabled>0</Disabled>
+      <TreeImageData16x14>424dba030000000000003a00000028000000100000000e0000000100200000000000800300000000000000000000000000000000000013012635ff00ff00c0c0c000c0c0c000c0c0c000c0c0c000808080008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</TreeImageData16x14>
+      <BoxDef>
+        <FieldbusAddress>256</FieldbusAddress>
+        <AmsAddress>
+          <AmsPort>0</AmsPort>
+          <AmsPortTimeout>5</AmsPortTimeout>
+        </AmsAddress>
+      </BoxDef>
+      <TREEITEMTYPE_BOX>
+        <ItemName>Term 2 (EL4001)</ItemName>
+        <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL4001)</PathName>
+        <ItemType>5</ItemType>
+        <ItemId>2</ItemId>
+        <ItemSubType>9099</ItemSubType>
+        <ItemSubTypeName>EL4001 1K. Ana. Ausgang 0-10V, 12bit</ItemSubTypeName>
+        <Disabled>0</Disabled>
+        <TreeImageData16x14>424dba030000000000003a00000028000000100000000e000000010020000000000080030000000000000000000000000000000000000411ca6bff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff000000ff000000ff000000ff000000ff000000ff000000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</TreeImageData16x14>
+        <BoxDef>
+          <FieldbusAddress>257</FieldbusAddress>
+          <AmsAddress>
+            <AmsPort>0</AmsPort>
+            <AmsPortTimeout>5</AmsPortTimeout>
+          </AmsAddress>
+        </BoxDef>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>AO Outputs</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL4001)^AO Outputs</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>2</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>15</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>Analog output</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL4001)^AO Outputs^Analog output</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>4</ItemId>
+            <ItemSubType>4</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>14</TreeImageId>
+            <VarDef>
+              <VarType>INT16</VarType>
+              <VarTypeIEC>INT</VarTypeIEC>
+              <VarBitSize>16</VarBitSize>
+              <VarBitAddr>208</VarBitAddr>
+              <VarInOut>1</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>69633</IndexGroup>
+                <IndexOffset>26</IndexOffset>
+                <Length>2</Length>
+              </AdsInfo>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>WcState</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL4001)^WcState</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>3</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>16</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>WcState</ItemName>
+            <Comment><![CDATA[0 = Data valid
+1 = Data invalid
+]]></Comment>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 2 (EL4001)^WcState^WcState</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>5</ItemId>
+            <ItemSubType>1</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>12</TreeImageId>
+            <VarDef>
+              <VarType>BIT</VarType>
+              <VarTypeIEC>BOOL</VarTypeIEC>
+              <VarBitSize>1</VarBitSize>
+              <VarBitAddr>12176</VarBitAddr>
+              <VarInOut>0</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>81921</IndexGroup>
+                <IndexOffset>12176</IndexOffset>
+                <Length>1</Length>
+              </AdsInfo>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+      </TREEITEMTYPE_BOX>
+      <TREEITEMTYPE_BOX>
+        <ItemName>Term 3 (EL2004)</ItemName>
+        <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)</PathName>
+        <ItemType>5</ItemType>
+        <ItemId>3</ItemId>
+        <ItemSubType>9099</ItemSubType>
+        <ItemSubTypeName>EL2004 4K. Dig. Ausgang 24V, 0.5A</ItemSubTypeName>
+        <Disabled>0</Disabled>
+        <TreeImageId>31</TreeImageId>
+        <BoxDef>
+          <FieldbusAddress>1001</FieldbusAddress>
+          <AmsAddress>
+            <AmsPort>0</AmsPort>
+            <AmsPortTimeout>5</AmsPortTimeout>
+          </AmsAddress>
+        </BoxDef>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>Channel 1</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 1</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>2</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>15</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>Output</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 1^Output</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>10</ItemId>
+            <ItemSubType>1</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>18</TreeImageId>
+            <VarDef>
+              <VarType>BIT</VarType>
+              <VarTypeIEC>BOOL</VarTypeIEC>
+              <VarBitSize>1</VarBitSize>
+              <VarBitAddr>224</VarBitAddr>
+              <VarInOut>1</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>77825</IndexGroup>
+                <IndexOffset>224</IndexOffset>
+                <Length>1</Length>
+              </AdsInfo>
+              <LinkedWith>TIRT^Task 1^Outputs^OutputV55</LinkedWith>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>Channel 2</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 2</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>2</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>15</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>Output</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 2^Output</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>11</ItemId>
+            <ItemSubType>1</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>14</TreeImageId>
+            <VarDef>
+              <VarType>BIT</VarType>
+              <VarTypeIEC>BOOL</VarTypeIEC>
+              <VarBitSize>1</VarBitSize>
+              <VarBitAddr>225</VarBitAddr>
+              <VarInOut>1</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>77825</IndexGroup>
+                <IndexOffset>225</IndexOffset>
+                <Length>1</Length>
+              </AdsInfo>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>Channel 3</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 3</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>2</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>15</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>Output</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 3^Output</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>12</ItemId>
+            <ItemSubType>1</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>14</TreeImageId>
+            <VarDef>
+              <VarType>BIT</VarType>
+              <VarTypeIEC>BOOL</VarTypeIEC>
+              <VarBitSize>1</VarBitSize>
+              <VarBitAddr>226</VarBitAddr>
+              <VarInOut>1</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>77825</IndexGroup>
+                <IndexOffset>226</IndexOffset>
+                <Length>1</Length>
+              </AdsInfo>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>Channel 4</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 4</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>2</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>15</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>Output</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^Channel 4^Output</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>13</ItemId>
+            <ItemSubType>1</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>14</TreeImageId>
+            <VarDef>
+              <VarType>BIT</VarType>
+              <VarTypeIEC>BOOL</VarTypeIEC>
+              <VarBitSize>1</VarBitSize>
+              <VarBitAddr>227</VarBitAddr>
+              <VarInOut>1</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>77825</IndexGroup>
+                <IndexOffset>227</IndexOffset>
+                <Length>1</Length>
+              </AdsInfo>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+        <TREEITEMTYPE_VARGRP>
+          <ItemName>WcState</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^WcState</PathName>
+          <ItemType>8</ItemType>
+          <ItemId>0</ItemId>
+          <ItemSubType>3</ItemSubType>
+          <ChildCount>1</ChildCount>
+          <Disabled>0</Disabled>
+          <TreeImageId>16</TreeImageId>
+          <TREEITEMTYPE_VAR>
+            <ItemName>WcState</ItemName>
+            <Comment><![CDATA[0 = Data valid
+1 = Data invalid
+]]></Comment>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 3 (EL2004)^WcState^WcState</PathName>
+            <ItemType>7</ItemType>
+            <ItemId>14</ItemId>
+            <ItemSubType>1</ItemSubType>
+            <ChildCount>0</ChildCount>
+            <Disabled>0</Disabled>
+            <TreeImageId>12</TreeImageId>
+            <VarDef>
+              <VarType>BIT</VarType>
+              <VarTypeIEC>BOOL</VarTypeIEC>
+              <VarBitSize>1</VarBitSize>
+              <VarBitAddr>12176</VarBitAddr>
+              <VarInOut>0</VarInOut>
+              <OnlineValue>0</OnlineValue>
+              <AdsInfo>
+                <AmsAddress>
+                  <AmsPort>300</AmsPort>
+                </AmsAddress>
+                <IndexGroup>81921</IndexGroup>
+                <IndexOffset>12176</IndexOffset>
+                <Length>1</Length>
+              </AdsInfo>
+            </VarDef>
+          </TREEITEMTYPE_VAR>
+        </TREEITEMTYPE_VARGRP>
+      </TREEITEMTYPE_BOX>
+      <TREEITEMTYPE_BOX>
+        <ItemName>Term 6 (EK1521)</ItemName>
+        <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)</PathName>
+        <ItemType>5</ItemType>
+        <ItemId>6</ItemId>
+        <ItemSubType>9099</ItemSubType>
+        <ItemSubTypeName>EK1521 1-Port EtherCAT-Abzweig (FX-MultiMode)</ItemSubTypeName>
+        <Disabled>0</Disabled>
+        <TreeImageData16x14>424dba030000000000003a00000028000000100000000e000000010020000000000080030000000000000000000000000000000000009e2d6aeeff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c0008080800080808000c0c0c000c0c0c0008080800000bfff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000808080008080800000bfff0000bfff0000bfff0000bfff0000bfff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c0008080800080808000c0c0c000000000000000000000bfff0000000000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000808080008080800000bfff0000bfff0000bfff0000bfff0000bfff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000c0c0c0008080800080808000c0c0c000c0c0c0008080800000bfff00ff00ff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000c0c0c000bbc2bb00c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000bac2ba000bfc0b00c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00007fff00007fff00007fff00007fff00007fff00007fff00c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00</TreeImageData16x14>
+        <BoxDef>
+          <FieldbusAddress>1002</FieldbusAddress>
+          <AmsAddress>
+            <AmsPort>0</AmsPort>
+            <AmsPortTimeout>5</AmsPortTimeout>
+          </AmsAddress>
+        </BoxDef>
+        <TREEITEMTYPE_BOX>
+          <ItemName>Term 7 (EK1100)</ItemName>
+          <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)</PathName>
+          <ItemType>5</ItemType>
+          <ItemId>7</ItemId>
+          <ItemSubType>9099</ItemSubType>
+          <ItemSubTypeName>EK1100 EtherCAT-Koppler (2A E-Bus)</ItemSubTypeName>
+          <Disabled>0</Disabled>
+          <TreeImageData16x14>424dba030000000000003a00000028000000100000000e00000001002000000000008003000000000000000000000000000000000000f58bf7dfff00ff00c0c0c000c0c0c000c0c0c000c0c0c000808080008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000bfff0000bfff00c0c0c00080808000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</TreeImageData16x14>
+          <BoxDef>
+            <FieldbusAddress>1003</FieldbusAddress>
+            <AmsAddress>
+              <AmsPort>0</AmsPort>
+              <AmsPortTimeout>5</AmsPortTimeout>
+            </AmsAddress>
+          </BoxDef>
+          <TREEITEMTYPE_BOX>
+            <ItemName>Term 8 (EL1252)</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)</PathName>
+            <ItemType>5</ItemType>
+            <ItemId>8</ItemId>
+            <ItemSubType>9099</ItemSubType>
+            <ItemSubTypeName>EL1252 2K. Fast Dig. Eingang 24V, 1�s, DC Latch</ItemSubTypeName>
+            <Disabled>0</Disabled>
+            <TreeImageId>7</TreeImageId>
+            <BoxDef>
+              <FieldbusAddress>1004</FieldbusAddress>
+              <AmsAddress>
+                <AmsPort>0</AmsPort>
+                <AmsPortTimeout>5</AmsPortTimeout>
+              </AmsAddress>
+            </BoxDef>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>Channel 1</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Channel 1</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>1</ItemSubType>
+              <ChildCount>1</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>13</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Input</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Channel 1^Input</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>28</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>17</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>328</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>328</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                  <LinkedWith>TIRT^Task 1^Inputs^InpuV13</LinkedWith>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>Channel 2</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Channel 2</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>1</ItemSubType>
+              <ChildCount>1</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>13</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Input</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Channel 2^Input</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>29</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>329</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>329</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>Reserved</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Reserved</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>1</ItemSubType>
+              <ChildCount>0</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>13</TreeImageId>
+            </TREEITEMTYPE_VARGRP>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>Latch</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>1</ItemSubType>
+              <ChildCount>6</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>13</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status1</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch^Status1</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>30</ItemId>
+                <ItemSubType>3</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>UINT8</VarType>
+                  <VarTypeIEC>USINT</VarTypeIEC>
+                  <VarBitSize>8</VarBitSize>
+                  <VarBitAddr>336</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>42</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status2</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch^Status2</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>31</ItemId>
+                <ItemSubType>3</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>UINT8</VarType>
+                  <VarTypeIEC>USINT</VarTypeIEC>
+                  <VarBitSize>8</VarBitSize>
+                  <VarBitAddr>344</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>43</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>LatchPos1</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch^LatchPos1</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>32</ItemId>
+                <ItemSubType>9</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>UINT64</VarType>
+                  <VarTypeIEC>ULINT</VarTypeIEC>
+                  <VarBitSize>64</VarBitSize>
+                  <VarBitAddr>352</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>44</IndexOffset>
+                    <Length>8</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>LatchNeg1</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch^LatchNeg1</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>33</ItemId>
+                <ItemSubType>9</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>UINT64</VarType>
+                  <VarTypeIEC>ULINT</VarTypeIEC>
+                  <VarBitSize>64</VarBitSize>
+                  <VarBitAddr>416</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>52</IndexOffset>
+                    <Length>8</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>LatchPos2</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch^LatchPos2</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>34</ItemId>
+                <ItemSubType>9</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>UINT64</VarType>
+                  <VarTypeIEC>ULINT</VarTypeIEC>
+                  <VarBitSize>64</VarBitSize>
+                  <VarBitAddr>480</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>60</IndexOffset>
+                    <Length>8</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>LatchNeg2</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^Latch^LatchNeg2</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>35</ItemId>
+                <ItemSubType>9</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>UINT64</VarType>
+                  <VarTypeIEC>ULINT</VarTypeIEC>
+                  <VarBitSize>64</VarBitSize>
+                  <VarBitAddr>544</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>68</IndexOffset>
+                    <Length>8</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>WcState</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^WcState</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>3</ItemSubType>
+              <ChildCount>2</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>16</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>WcState0</ItemName>
+                <Comment><![CDATA[0 = Data valid
+1 = Data invalid
+]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^WcState^WcState0</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>36</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>12177</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>12177</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>WcState1</ItemName>
+                <Comment><![CDATA[0 = Data valid
+1 = Data invalid
+]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 8 (EL1252)^WcState^WcState1</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>37</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>12177</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>12177</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+          </TREEITEMTYPE_BOX>
+          <TREEITEMTYPE_BOX>
+            <ItemName>Term 9 (EL3002)</ItemName>
+            <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)</PathName>
+            <ItemType>5</ItemType>
+            <ItemId>9</ItemId>
+            <ItemSubType>9099</ItemSubType>
+            <ItemSubTypeName>EL3002 2K.Ana. Eingang  +/-10V</ItemSubTypeName>
+            <Disabled>0</Disabled>
+            <TreeImageData16x14>424dba030000000000003a00000028000000100000000e00000001002000000000008003000000000000000000000000000000000000532ccc0aff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff008080800080808000808080008080800080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000ffff00c0c0c00000ffff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000ff000000c0c0c000ff00000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c0000000ff00c0c0c0000000ff0080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c00000000000c0c0c0000000000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c00000800000c0c0c0000080000080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff0000ff000000ff000000ff000000ff000000ff000000ff0000c0c0c000c0c0c000c0c0c000c0c0c00080808000ff00ff00ff00ff00ff00ff00ff00ff00ff00ff00</TreeImageData16x14>
+            <BoxDef>
+              <FieldbusAddress>1005</FieldbusAddress>
+              <AmsAddress>
+                <AmsPort>0</AmsPort>
+                <AmsPortTimeout>5</AmsPortTimeout>
+              </AmsAddress>
+            </BoxDef>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>AI Standard Channel 1</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>1</ItemSubType>
+              <ChildCount>8</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>13</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Underrange</ItemName>
+                <Comment><![CDATA[Underrange event active]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__Underrange</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>38</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>608</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>608</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Overrange</ItemName>
+                <Comment><![CDATA[Overrange event active]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__Overrange</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>39</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>609</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>609</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Limit 1</ItemName>
+                <Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__Limit 1</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>40</ItemId>
+                <ItemSubType>23</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT2</VarType>
+                  <VarTypeIEC>BIT2</VarTypeIEC>
+                  <VarBitSize>2</VarBitSize>
+                  <VarBitAddr>610</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>167937</IndexGroup>
+                    <IndexOffset>610</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Limit 2</ItemName>
+                <Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__Limit 2</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>41</ItemId>
+                <ItemSubType>23</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT2</VarType>
+                  <VarTypeIEC>BIT2</VarTypeIEC>
+                  <VarBitSize>2</VarBitSize>
+                  <VarBitAddr>612</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>167937</IndexGroup>
+                    <IndexOffset>612</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Error</ItemName>
+                <Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__Error</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>42</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>614</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>614</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__TxPDO State</ItemName>
+                <Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__TxPDO State</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>43</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>622</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>622</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__TxPDO Toggle</ItemName>
+                <Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Status__TxPDO Toggle</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>44</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>623</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>623</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Value</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 1^Value</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>45</ItemId>
+                <ItemSubType>4</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>INT16</VarType>
+                  <VarTypeIEC>INT</VarTypeIEC>
+                  <VarBitSize>16</VarBitSize>
+                  <VarBitAddr>624</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>78</IndexOffset>
+                    <Length>2</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>AI Standard Channel 2</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>1</ItemSubType>
+              <ChildCount>8</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>13</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Underrange</ItemName>
+                <Comment><![CDATA[Underrange event active]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__Underrange</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>46</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>640</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>640</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Overrange</ItemName>
+                <Comment><![CDATA[Overrange event active]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__Overrange</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>47</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>641</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>641</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Limit 1</ItemName>
+                <Comment><![CDATA[Bit0: Value smaller/equal Limit1
+Bit1: Value bigger/equal Limit1]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__Limit 1</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>48</ItemId>
+                <ItemSubType>23</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT2</VarType>
+                  <VarTypeIEC>BIT2</VarTypeIEC>
+                  <VarBitSize>2</VarBitSize>
+                  <VarBitAddr>642</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>167937</IndexGroup>
+                    <IndexOffset>642</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Limit 2</ItemName>
+                <Comment><![CDATA[Bit0: Value smaller/equal Limit2
+Bit1: Value bigger/equal Limit2]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__Limit 2</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>49</ItemId>
+                <ItemSubType>23</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT2</VarType>
+                  <VarTypeIEC>BIT2</VarTypeIEC>
+                  <VarBitSize>2</VarBitSize>
+                  <VarBitAddr>644</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>167937</IndexGroup>
+                    <IndexOffset>644</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__Error</ItemName>
+                <Comment><![CDATA[Bit set when Over- or Underrange]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__Error</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>50</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>646</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>646</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__TxPDO State</ItemName>
+                <Comment><![CDATA[TRUE when this TxPDO is not valid]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__TxPDO State</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>51</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>654</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>654</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Status__TxPDO Toggle</ItemName>
+                <Comment><![CDATA[Bit toggles everytime when new value available]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Status__TxPDO Toggle</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>52</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>655</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>655</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+              <TREEITEMTYPE_VAR>
+                <ItemName>Value</ItemName>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^AI Standard Channel 2^Value</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>53</ItemId>
+                <ItemSubType>4</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>INT16</VarType>
+                  <VarTypeIEC>INT</VarTypeIEC>
+                  <VarBitSize>16</VarBitSize>
+                  <VarBitAddr>656</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>73729</IndexGroup>
+                    <IndexOffset>82</IndexOffset>
+                    <Length>2</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+            <TREEITEMTYPE_VARGRP>
+              <ItemName>WcState</ItemName>
+              <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^WcState</PathName>
+              <ItemType>8</ItemType>
+              <ItemId>0</ItemId>
+              <ItemSubType>3</ItemSubType>
+              <ChildCount>1</ChildCount>
+              <Disabled>0</Disabled>
+              <TreeImageId>16</TreeImageId>
+              <TREEITEMTYPE_VAR>
+                <ItemName>WcState</ItemName>
+                <Comment><![CDATA[0 = Data valid
+1 = Data invalid
+]]></Comment>
+                <PathName>TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^Term 6 (EK1521)^Term 7 (EK1100)^Term 9 (EL3002)^WcState^WcState</PathName>
+                <ItemType>7</ItemType>
+                <ItemId>54</ItemId>
+                <ItemSubType>1</ItemSubType>
+                <ChildCount>0</ChildCount>
+                <Disabled>0</Disabled>
+                <TreeImageId>12</TreeImageId>
+                <VarDef>
+                  <VarType>BIT</VarType>
+                  <VarTypeIEC>BOOL</VarTypeIEC>
+                  <VarBitSize>1</VarBitSize>
+                  <VarBitAddr>12177</VarBitAddr>
+                  <VarInOut>0</VarInOut>
+                  <OnlineValue>0</OnlineValue>
+                  <AdsInfo>
+                    <AmsAddress>
+                      <AmsPort>300</AmsPort>
+                    </AmsAddress>
+                    <IndexGroup>81921</IndexGroup>
+                    <IndexOffset>12177</IndexOffset>
+                    <Length>1</Length>
+                  </AdsInfo>
+                </VarDef>
+              </TREEITEMTYPE_VAR>
+            </TREEITEMTYPE_VARGRP>
+          </TREEITEMTYPE_BOX>
+        </TREEITEMTYPE_BOX>
+      </TREEITEMTYPE_BOX>
+    </TREEITEMTYPE_BOX>
+  </TREEITEMTYPE_DEVICE>
+</CompleteXMLDescription>
+

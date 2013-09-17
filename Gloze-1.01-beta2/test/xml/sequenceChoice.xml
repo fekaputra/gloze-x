@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<choice xmlns="http://example.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://example.org/ ../schema/sequence.xsd">
+	1
+	<foo/>
+	2
+	<bar>0</bar>
+	3
+</choice>

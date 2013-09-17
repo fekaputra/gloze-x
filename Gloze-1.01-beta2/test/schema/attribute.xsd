@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<!-- the attribute is global and qualified -->
+	<xs:attribute name="foo" />
+	<xs:element name="attribute">
+		<xs:complexType>
+			<xs:attribute ref="foo"/>
+		</xs:complexType>	
+	</xs:element>
+	
+	<xs:element name="simpleType">
+		<xs:complexType>
+			<xs:attribute name="foo">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="dataType">
+		<xs:complexType>
+			<xs:attribute name="foo" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="qname">
+		<xs:complexType>
+			<xs:attribute name="foo" type="xs:QName" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="form">
+		<xs:complexType mixed="true">
+			<!-- unqualified local attribute -->
+			<xs:attribute name="bar" type="xs:string"/>
+			<!-- explicitly qualified local attribute -->
+			<xs:attribute name="bar" type="xs:string" form="qualified"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="identity">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="foobar">
+					<xs:complexType>
+						<xs:attribute name="id" type="xs:ID"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="bar" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="idref" type="xs:IDREF"/>
+			    		<xs:attribute name="idrefs" type="xs:IDREFS"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="lang">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="xml:lang" use="required"/>
+					<xs:anyAttribute namespace="##other"/>
+				</xs:extension>
+			</xs:simpleContent>	
+		</xs:complexType>	
+	</xs:element>
+	
+	<xs:notation name="jpeg" public="image/jpeg"/>
+	<xs:notation name="gif" public="image/gif" />
+	<xs:notation name="png" public="image/png" />
+	
+	<xs:element name="notation">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="xs:base64Binary">
+					<xs:attribute name="mimeType">
+						<xs:simpleType >
+							<xs:restriction base="xs:NOTATION">
+								<xs:enumeration value="jpeg"/>
+								<xs:enumeration value="gif"/>
+								<xs:enumeration value="png"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

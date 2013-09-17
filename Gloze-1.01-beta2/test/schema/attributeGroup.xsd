@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:attributeGroup name="AttributeGroup" />
+	<xs:element name="attributeGroup">
+		<xs:complexType>
+			<xs:attributeGroup ref="AttributeGroup"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:attributeGroup name="AttributeGroupAttribute">
+		<xs:attribute name="foo" type="xs:string"/>
+	</xs:attributeGroup>
+	<xs:element name="attribute">
+		<xs:complexType>
+			<xs:attributeGroup ref="AttributeGroupAttribute"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attributeGroup name="AttributeGroupAttributeGroup">
+		<xs:attributeGroup ref="AttributeGroupAttribute"/>
+	</xs:attributeGroup>
+	<xs:element name="attributeGroupAttributeGroup">
+		<xs:complexType>
+			<xs:attributeGroup ref="AttributeGroupAttributeGroup"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attributeGroup name="AttributeGroupAnyAttribute">
+		<xs:anyAttribute namespace="##any" processContents="skip"/>
+	</xs:attributeGroup>
+	<xs:element name="anyAttribute">
+		<xs:complexType>
+			<xs:attributeGroup ref="AttributeGroupAnyAttribute"/>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

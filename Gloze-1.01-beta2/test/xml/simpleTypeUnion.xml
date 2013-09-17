@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<union xmlns="http://example.org/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/ ../schema/simpleType.xsd" 
+	xmlns:hp="http://www.hp.com/" xmlns:hpl="http://www.hpl.hp.com/personal/"
+>hp:uk hpl:steve_battle/</union>
+
+

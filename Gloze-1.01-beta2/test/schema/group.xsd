@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://example.org/" xmlns="http://example.org/"
+	elementFormDefault="qualified">
+	
+	<xs:element name="foo" type="xs:string"/>
+	<xs:element name="bar" type="xs:int"/>
+	
+	<xs:element name="group">
+		<xs:complexType>
+			<xs:group ref="Group" maxOccurs="unbounded"/>
+		</xs:complexType>	
+	</xs:element>
+	<xs:group name="Group">
+		<xs:all/>
+	</xs:group>
+
+	<xs:group name="choice">
+		<xs:choice>
+			<xs:element ref="foo"/>
+			<xs:element ref="bar"/>
+		</xs:choice>
+	</xs:group>
+
+	<xs:group name="all">
+		<xs:all>
+			<xs:element ref="foo"/>
+			<xs:element ref="bar"/>
+		</xs:all>
+	</xs:group>
+	
+	<xs:group name="sequence">
+		<xs:sequence>
+			<xs:element ref="foo"/>
+			<xs:element ref="bar"/>
+		</xs:sequence>
+	</xs:group>
+	
+	<!-- each choice has unrestricted cardinality 0..unbounded -->
+	<xs:element name="choice">
+		<xs:complexType>
+			<xs:group ref="choice" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="all">
+		<xs:complexType>
+			<xs:group ref="all" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="sequence">
+		<xs:complexType>
+			<xs:group ref="sequence" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

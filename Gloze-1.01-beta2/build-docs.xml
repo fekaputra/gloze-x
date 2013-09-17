@@ -1,0 +1,143 @@
+<project name="Gloze" default="docs" basedir=".">
+
+  <!-- Configuration properties -->
+  <!-- ======================== -->
+
+  <property name="Name"            value="Gloze"/>
+  <property name="name"            value="gloze"/>
+	
+  <property name="jena.lib"        value="../Jena-2.5.7/lib"/>
+
+  <!-- Release version labels -->
+  <property name="version-major"   value="1"/>
+  <property name="version-minor"   value="01"/>
+  <!-- e.g. -beta1, or empty string for stable releases -->
+  <property name="version-status"  value="-beta2"/>
+
+  <property name="version"         value="${version-major}.${version-minor}${version-status}"/>
+
+  <!-- Output file names and locations -->
+  <property name="dist.name"       value="${Name}-${version}"/>
+  <property name="dist.zip.name"   value="${Name}-${version}.zip"/>
+  <property name="web.site"        value="http://jena.sourceforge.net/" />
+  <property name="jarfile"         value="${name}.jar"/>
+
+  <!-- Source code locations -->
+  <property name="src"         	   value="src"/>
+  <property name="src.dir"         value="src/java"/>
+  <property name="src.info.dir"    value="src/beanInfo"/>
+  <property name="src.test.dir"    value="test/src"/>
+  <property name="bldsrc.dir"      value="build/src"/>
+  <property name="classes.dir"     value="build/classes"/>
+  <property name="dist.root"       value="build/dist"/>
+  <property name="dist.dir"        value="${dist.root}/${dist.name}"/>
+  <property name="dist.src"        value="${dist.dir}/src"/>
+  <property name="dist.test"       value="${dist.dir}/test"/>
+  <property name="lib.dir"         value="lib"/>
+  <property name="doc.dir"         value="doc"/>
+  <property name="samples.dir"     value="samples"/>
+  <property name="test.dir"        value="test"/>
+
+	<!-- Classpaths -->
+
+	<path id="classpath.runtime">
+		<fileset dir="${lib.dir}" includes="*.jar" />
+		<fileset dir="${jena.lib}" includes="*.jar" />
+	</path>
+
+	<!-- Documentation -->
+	<!-- ============= -->
+
+	<!-- comment this in to generate documentation -->
+	<taskdef name="doxygen" classname="org.doxygen.tools.DoxygenTask" />
+
+	<target name="clean-doc"
+		description="Clean out the old html dir prior to generation">
+		<delete>
+		    <fileset dir="${doc.dir}/html" includes="**/*"/>
+		</delete>
+	</target>
+	
+	<target name="examples" description="run examples for documentation">
+		<!-- lift the main examples to rdf -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.space=default" />
+			<arg value="${doc.dir}/examples" />
+		</java>
+		<!-- lift the main examples to N3 -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.target=${doc.dir}/examples" />
+			<jvmarg value="-Dgloze.space=default" />
+			<jvmarg value="-Dgloze.lang=N3" />
+			<arg value="${doc.dir}/examples" />
+		</java>
+		<!-- examples with attribute prefix set -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.target=${doc.dir}/examples/attribute" />
+			<jvmarg value="-Dgloze.lang=N3" />
+			<jvmarg value="-Dgloze.attribute=@" />
+			<jvmarg value="-Dgloze.space=default" />
+			<arg value="${doc.dir}/examples/attribute" />
+		</java>
+		<!-- examples with attribute prefix set -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.target=${doc.dir}/examples/attribute" />
+			<jvmarg value="-Dgloze.lang=N3" />
+			<jvmarg value="-Dgloze.attribute=@" />
+			<jvmarg value="-Dgloze.space=default" />
+			<arg value="${doc.dir}/examples/attribute" />
+		</java>
+		<!-- examples with element prefix set -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.target=${doc.dir}/examples/element" />
+			<jvmarg value="-Dgloze.lang=N3" />
+			<jvmarg value="-Dgloze.element=~" />
+			<jvmarg value="-Dgloze.space=default" />
+			<arg value="${doc.dir}/examples/element" />
+		</java>
+		<!-- examples with necessary & sufficient class defs -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.target=${doc.dir}/examples/intersectionOf" />
+			<jvmarg value="-Dgloze.lang=N3" />
+			<jvmarg value="-Dgloze.class=intersectionOf" />
+			<jvmarg value="-Dgloze.space=default" />
+			<arg value="${doc.dir}/examples/intersectionOf" />
+		</java>
+		<!-- examples with ordered content -->
+		<java classname="com.hp.gloze.Gloze" fork="true" failonerror="true">
+			<classpath refid="classpath.runtime" />
+			<jvmarg value="-Dgloze.xmlns=http://example.org/def/" />
+			<jvmarg value="-Dgloze.base=http://example.org/" />
+			<jvmarg value="-Dgloze.target=${doc.dir}/examples/seq" />
+			<jvmarg value="-Dgloze.lang=N3" />
+			<jvmarg value="-Dgloze.order=seq" />
+			<jvmarg value="-Dgloze.space=default" />
+			<arg value="${doc.dir}/examples/seq" />
+		</java>
+	</target>
+
+	<target name="docs" depends="clean-doc, examples">
+		<!-- doxygen documentation generator -->
+		<doxygen configFilename="Doxyfile" />
+	</target>
+	
+</project>

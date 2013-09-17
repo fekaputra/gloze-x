@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://example.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://example.org/ ../schema/sequence.xsd">
+	1
+	<foo/>
+	2
+	<foo>foobar</foo>
+	3
+	<bar>0</bar>
+	4
+	<bar>1</bar>
+	5
+</sequence>

@@ -1,0 +1,90 @@
+# XML schema datatypes
+
+-> (xsd:ID rdf:type rdfs:Datatype), (xsd:ID rdfs:subClassOf xsd:anyURI), (xsd:ID rdfs:subClassOf xsd:Name).
+-> (xsd:IDREF rdf:type rdfs:Datatype), (xsd:IDREF rdfs:subClassOf xsd:anyURI), (xsd:IDREF rdfs:subClassOf xsd:Name).
+-> (xsd:NCName rdf:type rdfs:Datatype), (xsd:NCName rdfs:subClassOf xsd:anyURI), (xsd:NCName rdfs:subClassOf xsd:Name).
+-> (xsd:NMTOKEN rdf:type rdfs:Datatype), (xsd:NMTOKEN rdfs:subClassOf xsd:token).
+-> (xsd:Name rdf:type rdfs:Datatype), (xsd:Name rdfs:subClassOf xsd:NMTOKEN).
+-> (xsd:anyURI rdf:type rdfs:Datatype), (xsd:anyURI rdfs:subClassOf xsd:token).
+-> (xsd:base64Binary rdf:type rdfs:Datatype).
+-> (xsd:boolean rdf:type rdfs:Datatype).
+-> (xsd:byte rdf:type rdfs:Datatype), (xsd:byte rdfs:subClassOf xsd:short).
+-> (xsd:date rdf:type rdfs:Datatype).
+-> (xsd:dateTime rdf:type rdfs:Datatype).
+-> (xsd:decimal rdf:type rdfs:Datatype).
+-> (xsd:double rdf:type rdfs:Datatype).
+-> (xsd:duration rdf:type rdfs:Datatype).
+-> (xsd:float rdf:type rdfs:Datatype), (xsd:float rdfs:subClassOf xsd:double).
+-> (xsd:gDay rdf:type rdfs:Datatype).
+-> (xsd:gMonth rdf:type rdfs:Datatype).
+-> (xsd:gMonthDay rdf:type rdfs:Datatype).
+-> (xsd:gYear rdf:type rdfs:Datatype).
+-> (xsd:gYearMonth rdf:type rdfs:Datatype).
+-> (xsd:hexBinary rdf:type rdfs:Datatype).
+-> (xsd:int rdf:type rdfs:Datatype), (xsd:int rdfs:subClassOf xsd:long), (xsd:int rdfs:subClassOf xsd:double).
+-> (xsd:integer rdf:type rdfs:Datatype), (xsd:integer rdfs:subClassOf xsd:decimal).
+-> (xsd:language rdf:type rdfs:Datatype), (xsd:language rdfs:subClassOf xsd:NCName),
+	(xsd:language rdfs:subClassOf xsd:ID), (xsd:language rdfs:subClassOf xsd:IDREF).
+-> (xsd:long rdf:type rdfs:Datatype), (xsd:long rdfs:subClassOf xsd:integer).
+-> (xsd:negativeInteger rdf:type rdfs:Datatype), (xsd:negativeInteger rdfs:subClassOf xsd:nonPositiveInteger).
+-> (xsd:nonNegativeInteger rdf:type rdfs:Datatype), (xsd:nonNegativeInteger rdfs:subClassOf xsd:integer).
+-> (xsd:nonPositiveInteger rdf:type rdfs:Datatype), (xsd:nonPositiveInteger rdfs:subClassOf xsd:integer).
+-> (xsd:normalizedString rdf:type rdfs:Datatype), (xsd:normalizedString rdfs:subClassOf xsd:string).
+-> (xsd:positiveInteger rdf:type rdfs:Datatype), (xsd:positiveInteger rdfs:subClassOf xsd:nonNegativeInteger).
+-> (xsd:short rdf:type rdfs:Datatype), (xsd:short rdfs:subClassOf xsd:int), (xsd:short rdfs:subClassOf xsd:float).
+-> (xsd:string rdf:type rdfs:Datatype).
+-> (xsd:time rdf:type rdfs:Datatype).
+-> (xsd:token rdf:type rdfs:Datatype), (xsd:token rdfs:subClassOf xsd:normalizedString).
+-> (xsd:unsignedByte rdf:type rdfs:Datatype), (xsd:unsignedByte rdfs:subClassOf xsd:short), 
+	(xsd:unsignedByte rdfs:subClassOf xsd:unsignedShort).
+-> (xsd:unsignedInt rdf:type rdfs:Datatype), (xsd:unsignedInt rdfs:subClassOf xsd:long), 
+	(xsd:unsignedInt rdfs:subClassOf xsd:double), (xsd:unsignedInt rdfs:subClassOf xsd:unsignedLong).
+-> (xsd:unsignedLong rdf:type rdfs:Datatype), (xsd:unsignedLong rdfs:subClassOf xsd:nonNegativeInteger).
+-> (xsd:unsignedShort rdf:type rdfs:Datatype), (xsd:unsignedShort rdfs:subClassOf xsd:int),
+	(xsd:unsignedShort rdfs:subClassOf xsd:float), (xsd:unsignedShort rdfs:subClassOf xsd:unsignedInt).
+
+# These rules bring out inconsistencies between instance data and a corresponding ontology
+
+# The type of a literal should match the range of the (global) property
+# this may now be a sub-class of the datatype
+#(?s ?p ?l), isLiteral(?l), (?p rdfs:range ?r), notEqual(?r,xsd:anySimpleType), notDType(?l, ?r) 
+#-> print("bad data range", ?s, ?p, ?l, ?r), (?p rb:violation error('bad data range','',?p)).
+
+# The tail of a list is itself a List
+(?head rdf:rest ?tail) -> (?tail rdf:type rdf:List).
+
+# Non-literals should be explicity typed where the corresponding property range is not anonymous
+#(?s ?p ?o), notEqual(?p,rdfs:subClassOf), notLiteral(?o), notEqual(?p,rdf:type), (?p rdfs:range ?r), notBNode(?r), noValue(?o rdf:type ?r),
+#notEqual(?r,rdf:List)
+#-> print("bad object range", ?s, ?p, ?o, ?r), (?p rb:violation error('bad object range','',?p)).
+
+# ..otherwise classify the object with the (anonymous) range
+(?s ?p ?o), notLiteral(?o), (?p rdfs:range ?r), isBNode(?r) -> (?o rdf:type ?r).
+
+# A literal property value should be a Datatype (or simply a Property)
+#(?s ?p ?l), isLiteral(?l), (?p rdf:type owl:ObjectProperty), noValue(?p rdf:type owl:DatatypeProperty)
+#-> print("range inconsistency", ?s, ?p, ?l), (?p rb:violation error('range inconsistency','',?p)).
+
+# A non-literal property value should be an Object property (or simply a property)
+#(?s ?p ?o), notLiteral(?o), (?p rdf:type owl:DatatypeProperty), noValue(?p rdf:type owl:ObjectProperty)
+#-> print("range inconsistency", ?s, ?p, ?l), (?p rb:violation error('range inconsistency','',?p)).
+
+# A property count should equal its cardinality constraint
+(?s ?p ?o), (?s rdf:type ?t), (?t rdfs:subClassOf ?r), 
+(?r rdf:type owl:Restriction), (?r owl:onProperty ?p), (?r owl:cardinality ?c),
+countValues(?s, ?p, ?n), notEqual(?n,?c) 
+-> print("cardinality inconsistency", ?s, ?p), (?p rb:violation error('cardinality inconsistency','',?p)). 	
+
+# A property count should not be less than its minCardinality constraint
+(?s ?p ?o), (?s rdf:type ?t), (?t rdfs:subClassOf ?r), 
+(?r rdf:type owl:Restriction), (?r owl:onProperty ?p), (?r owl:minCardinality ?c),
+countValues(?s, ?p, ?n), lessThan(?n,?c) 
+-> print("minCardinality inconsistency", ?s, ?p), (?p rb:violation error('minCardinality inconsistency','',?p)). 
+
+# A property count should not be greater than its maxCardinality constraint
+(?s ?p ?o), (?s rdf:type ?t), (?t rdfs:subClassOf ?r), 
+(?r rdf:type owl:Restriction), (?r owl:onProperty ?p), (?r owl:maxCardinality ?c),
+countValues(?s, ?p, ?n), greaterThan(?n,?c) 
+-> print("maxCardinality inconsistency", ?s, ?p), (?p rb:violation error('maxCardinality inconsistency','',?p)). 
+
+				

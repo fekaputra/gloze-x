@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<choice xmlns="http://example.org/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/ ../schema/complexType.xsd">
+	1
+	<foo>bar</foo>
+	2
+	<foo>bar</foo>
+	3
+	<bar>1</bar>
+	4
+	<bar>1</bar>
+	5
+</choice>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ns1="http://www.w3schools.com#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xs_="http://www.w3.org/2001/XMLSchema#"
+    xmlns:ns3="http://cdl.ifs.tuwien.ac.at#"
+    xmlns:ns2="http://example.org#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.juang.me/books.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:ObjectProperty rdf:about="http://cdl.ifs.tuwien.ac.at#book">
+    <rdfs:range>
+      <owl:Class>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#price"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#author"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#description"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#publish_date"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#author"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#genre"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#title"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#genre"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#publish_date"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#title"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#description"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:about="http://example.org#price"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org#price">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org#description">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org#title">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org#publish_date">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org#author">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://example.org#genre">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>

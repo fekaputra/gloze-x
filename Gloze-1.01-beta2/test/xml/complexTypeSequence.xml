@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<sequence xmlns="http://example.org/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://example.org/ ../schema/complexType.xsd">
+	1
+	<foo>foobar</foo>
+	2
+	<foo>foobar</foo>
+	3
+	<bar>1</bar>
+	4
+	<foo>foobar</foo>
+	5
+	<bar>1</bar>
+	6
+</sequence>

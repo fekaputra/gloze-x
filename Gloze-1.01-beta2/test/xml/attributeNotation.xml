@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<!-- example adapted from http://www.w3.org/TR/2004/WD-xml-media-types-20041102/ -->
+<notation xmlns="http://example.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.org/ ../schema/attribute.xsd" 
+	mimeType="png">/aWKKapGGyQ=</notation>
